@@ -7,13 +7,13 @@ def synshow():
     response = http_client.fetch("https://ithelp.ithome.com.tw/")
 
     print(response)
-    print("hello，這是同步阻塞的狀況，我已經跟IT邦網站連線了")
+    print("sync issue, connected successfully.")
 
 async def asynshow():
     http_client = AsyncHTTPClient()
     response = await http_client.fetch("https://ithelp.ithome.com.tw/")
     print(response, "in function")
-    print ("hello，這是非同步的狀況，我已經跟IT邦網站連線了")
+    print ("async issue, connected successfully.")
 
 
 synshow()
